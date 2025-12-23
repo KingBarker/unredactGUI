@@ -1,75 +1,63 @@
-# PDF Redaction Text Recovery & Display Tool
+# Professional PDF Unredactor & Viewer (GUI)
 
-This repository contains a Python utility for extracting selectable (but visually redacted) text from PDF files and presenting it in a clear, human-readable format while preserving pagination and layout as closely as possible.
+A sophisticated, standalone GUI application used to recover underlying text from redacted PDF files. This tool creates a new "unredacted" layer over the original document, allowing you to see text that was covered by black boxes (provided the text data was not scrubbed from the file).
 
-The tool is intended for document analysis, archival review, research, and verification of redaction practices It does not bypass encryption or security controls; it only extracts text that remains present in the PDF content stream.
+## 🚀 Features
 
----
+### 🛠 Processing Dashboard
+* **Batch Processing:** Queue multiple individual files or entire folders at once.
+* **Recursive Scan:** Option to scan subdirectories for all `.pdf` files.
+* **Dual Modes:**
+    * **Side-by-Side:** Creates a page twice as wide, showing the original redaction on the left and the revealed text on the right.
+    * **Overlay (White Text):** Writes the recovered text in white directly over the black redaction boxes on the original page.
+* **Live Logging:** Real-time status updates and error reporting within the dashboard.
 
-## What This Tool Does
+### 👁️ Integrated Results Viewer
+* **Built-in PDF Viewer:** Review processed files immediately without leaving the app.
+* **Collapsible Sidebar:** Animated file browser that can be hidden for maximum viewing area.
+* **Navigation Controls:** Zoom In/Out, Fit to Width, and Page Navigation.
+* **Fullscreen Mode:** Press `F11` or the Fullscreen button for a distraction-free look.
+* **Independent Browsing:** Browse any folder on your system, not just the output directory.
 
-Many PDFs are “redacted” by placing opaque black rectangles over text without actually removing the underlying text objects. In such cases, the text remains selectable and copy-pastable.
+### 🎨 Customization
+* **Theme Engine:** Choose from 6 professional themes including Professional White, Soft Vanilla, Soft Sky, and more.
+* **High DPI Support:** Clean, flat "Metro-style" interface with crisp borders.
 
-This tool:
-- Extracts that underlying text using positional information
-- Reconstructs lines to avoid word overlap and run-on text
-- Preserves original page size and pagination
-- Produces display-friendly output in one of two modes
+## 📦 Installation
 
----
+This application requires **Python 3.x** and two external libraries.
 
-## Output Modes
+1.  **Clone or Download** this repository.
+2.  **Install Dependencies:**
+    ```bash
+    pip install pdfplumber pymupdf
+    ```
+    *(Note: `tkinter` usually comes pre-installed with Python. If you are on Linux, you may need to install `python3-tk`)*.
 
-### 1) Side-by-Side (Recommended)
+##  ▶️ Usage
 
-Each output page is double-width:
-
-- **Left:** Original PDF page (unchanged)
-- **Right:** Rebuilt, unredacted text positioned to match the original layout
-
-This mode is ideal for:
-- Review and comparison
-- Presentations or exhibits
-- Auditing redaction practices
-
-Example:
-
-![Side-by-side example](https://raw.githubusercontent.com/leedrake5/unredact/master/examples/an_example.png)
-
----
-
-### 2) White-Text Overlay
-
-The extracted text is drawn in white directly on top of the original PDF.
-
-If black redaction bars are present, the text often becomes visible without explicitly detecting or modifying the bars.
-
-This mode is useful for:
-- Visual inspection
-- Demonstrating improper redactions
-
----
-
-## How It Works
-
-1. `pdfplumber` extracts words along with their bounding boxes
-2. Words are grouped into lines based on vertical proximity
-3. Horizontal spacing is reconstructed from word gaps
-4. `PyMuPDF (pymupdf)` is used to:
-   - Embed original pages
-   - Draw rebuilt text with precise positioning
-   - Generate side-by-side or overlay output
-
-No OCR is performed.
-
----
-
-## Installation
+Simply run the script via Python:
 
 ```bash
-pip install pdfplumber pymupdf
-```
-## Use
-```bash
-python redact_extract.py example.pdf
-```
+python unredact_app.py
+
+    Go to the Dashboard tab.
+
+    Click + Add Files or + Add Folder.
+
+    Select an Output Location.
+
+    Choose your mode (Side-by-Side is recommended for verification).
+
+    Click Run Batch Process.
+
+    Once finished, the app will automatically switch to the Results Viewer tab to display your files.
+
+⚠️ Disclaimer
+
+This tool relies on metadata and underlying text layers remaining in the PDF. If a PDF was "flattened" as an image (rasterized) or properly sanitized using professional redaction software that removes the text layer, this tool will not be able to recover the text. It only works on redactions that were applied as cosmetic annotations over searchable text.
+🤝 Credits
+
+    GUI & Enhancements: Created by KingBarker
+
+    Core Logic & Original Concept: Leedrake5
