@@ -9,20 +9,6 @@ import fitz  # PyMuPDF
 from datetime import datetime
 from pathlib import Path
 
-# Embedded 24x24 Transparent PNG GitHub Icon (Base64)
-GITHUB_ICON_B64 = """
-iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAB
-mElEQVR4nO2UPU/CQBjH/++l5aOtqCgSRwcTjR8G42OMiQ66+RUc/QhuXsVYdGCDiYszk0wcjIqA
-D9DCoRfa8/RYaCtYqPfQ5J7m0v/9P8/13t0D/msI+d9QSiWICL2MMtom7OzsiD2Tye5+fX01hRD6
-dx9DKZUkEundcRx7Q0S0ZaSiiLaM49gHmdzuna7r8r9+4P695/F44kU0mncsy3IQEW0ZSimVMC3r
-NJpI7MRjscTz/L17z/N3AvT03Mzy8tO5UCh0L5VKSQD+K6lUSgqFQvfLr9/O9PTczHR03Ar+GoFh
-GNli8bGs67oilFJ4/vwJ+vpuwDCM3951XVcssfhc1jCMbGdnx8ArgbG+vn4qnU6/MwzD14XneUin
-0wiFQvB8A4lEAn6//0/HMAxfOp1+V1tbO4HOzssz3Qi3tx+PrK+/f/X5fKd+vx+O48BxXCil4PP5
-4Pf7EQolkEg8Q6MRYGTkUklEvDbQ2dnRt7Awk/P5fKf+gB/b2x2NVguNRgOvX79GIpFAKvUcz3Ox
-tDSbFxHPG+jq6rg0OTn+MhgMnvD7/ahW61BKQSkF3/eVa9uv4rEns57nvRERz38I+d43f6q9HW1R
-04kAAAAASUVORK5CYII=
-"""
-
 class ProfessionalUnredactApp:
     def __init__(self, root):
         self.root = root
