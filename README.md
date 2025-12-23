@@ -1,7 +1,7 @@
 # Professional PDF Unredactor & Viewer (GUI)
 
 A sophisticated, standalone GUI application used to recover underlying text from redacted PDF files. This tool creates a new "unredacted" layer over the original document, allowing you to see text that was covered by black boxes (provided the text data was not scrubbed from the file).
-<img width="1919" height="1153" alt="image" src="https://github.com/user-attachments/assets/6759761e-4081-4005-99fa-1a207e3a7d8e" />
+<img width="1919" height="750" alt="image" src="https://github.com/user-attachments/assets/6759761e-4081-4005-99fa-1a207e3a7d8e" />
 
 
 ## 🚀 Features
@@ -21,7 +21,7 @@ A sophisticated, standalone GUI application used to recover underlying text from
 * **Fullscreen Mode:** Press `F11` or the Fullscreen button for a distraction-free look.
 * **Independent Browsing:** Browse any folder on your system, not just the output directory.
 
-<img width="1917" height="1148" alt="image" src="https://github.com/user-attachments/assets/7a73bb24-1a03-405e-8196-3a2e0748ca37" />
+<img width="1917" height="750" alt="image" src="https://github.com/user-attachments/assets/7a73bb24-1a03-405e-8196-3a2e0748ca37" />
 
 ### 🎨 Customization
 * **Theme Engine:** Choose from 6 professional themes including Professional White, Soft Vanilla, Soft Sky, and more.
